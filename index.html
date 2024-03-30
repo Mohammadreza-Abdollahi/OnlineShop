@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <title>OnlineShop</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64911f2f0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <div class="socials">
+        <ul>
+          <li>
+            <a target="_blank" href="#"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/mohammadrza_abdollahi?igsh=NGM5bjRqNTRydHE5"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mohammadreza-abdollahi-623a062b9"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/Mohammadreza-Abdollahi"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <img class="logo" src="./src/logo/logoRed.png" alt="LOGO" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header End -->
+    <!-- Slider Start -->
+    <section>
+      <div class="slideshow">
+        <div class="slides-box" id="slides-box">
+          <!-- Slides -->
+        </div>
+        <div class="slideshow-buttons">
+          <div class="prev-btn"><i class="fa-solid fa-angles-left"></i></div>
+          <div class="next-btn"><i class="fa-solid fa-angles-right"></i></div>
+        </div>
+      </div>
+    </section>
+    <!-- Slider End -->
+    <!-- Template Start -->
+    <div id="slide-template">
+      <div class="slide" title="__TITLE__">
+        <div class="slide-info">
+          <a href="__LINK__">
+            <h3>__TITLE__</h3>
+            <span>__CAPTION__</span>
+          </a>
+        </div>
+        <img src="__IMG__" alt="slideImage" title="__TITLE__" />
+      </div>
+    </div>
+    <!-- Template End -->
+    <!-- Scripts Start -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./api/ApiAddress.js"></script>
+    <script src="./api/BaseApi.js"></script>
+    <script src="./api/Slider.js"></script>
+    <script src="./controllers/SliderCtrl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./src/libs/slider/slider.js"></script>
+    <script src="./script.js"></script>
+
+    <!-- Scripts End -->
+  </body>
+</html>
