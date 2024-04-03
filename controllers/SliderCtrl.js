@@ -1,9 +1,8 @@
 loadSlider = async () => {
   const slideTemplate = document.getElementById("slide-template").innerHTML;
   const slideBox = document.getElementById("slides-box");
-  let slider = new Slider();
+  let slider = new SliderApi();
   await slider.getAll((data) => {
-    // debugger;
     let slideCount = data.length;
     for (let i = 0; i < slideCount; i++) {
       let currentSlide = slideTemplate;

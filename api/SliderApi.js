@@ -1,4 +1,4 @@
-class Slider extends BaseApi {
+class SliderApi extends BaseApi {
   getAll = async (onSuccess) => {
     this.getData("slider", onSuccess);
   };

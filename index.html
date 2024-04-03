@@ -15,26 +15,26 @@
     <header>
       <div class="socials">
         <ul>
-          <li>
+          <li id="social1">
             <a target="_blank" href="#"
               ><i class="fa-brands fa-telegram"></i
             ></a>
           </li>
-          <li>
+          <li id="social2">
             <a
               target="_blank"
               href="https://www.instagram.com/mohammadrza_abdollahi?igsh=NGM5bjRqNTRydHE5"
               ><i class="fa-brands fa-instagram"></i
             ></a>
           </li>
-          <li>
+          <li id="social3">
             <a
               target="_blank"
               href="https://www.linkedin.com/in/mohammadreza-abdollahi-623a062b9"
               ><i class="fa-brands fa-linkedin"></i
             ></a>
           </li>
-          <li>
+          <li id="social4">
             <a target="_blank" href="https://github.com/Mohammadreza-Abdollahi"
               ><i class="fa-brands fa-github"></i
             ></a>
@@ -42,7 +42,7 @@
         </ul>
       </div>
       <nav>
-        <img class="logo" src="./src/logo/logoRed.png" alt="LOGO" />
+        <img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO" />
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
@@ -53,7 +53,7 @@
     </header>
     <!-- Header End -->
     <!-- Slider Start -->
-    <section>
+    <section class="slider-sec">
       <div class="slideshow">
         <div class="slides-box" id="slides-box">
           <!-- Slides -->
@@ -65,27 +65,55 @@
       </div>
     </section>
     <!-- Slider End -->
+    <!-- ProductsCategory Start -->
+    <section class="category-sec">
+      <h2 class="sec-title">Categories</h2>
+      <div id="category-holder" class="category-holder">
+        <!-- Categoris -->
+      </div>
+    </section>
+    <!-- ProductsCategory End -->
     <!-- Template Start -->
-    <div id="slide-template">
-      <div class="slide" title="__TITLE__">
-        <div class="slide-info">
-          <a href="__LINK__">
-            <h3>__TITLE__</h3>
-            <span>__CAPTION__</span>
+    <!-- SliderTemplate -->
+    <section class="template">
+      <div id="slide-template">
+        <div class="slide" title="__TITLE__">
+          <div class="slide-info">
+            <a href="__LINK__">
+              <h3>__TITLE__</h3>
+              <span>__CAPTION__</span>
+            </a>
+          </div>
+          <img src="__IMG__" alt="slideImage" title="__TITLE__" />
+        </div>
+      </div>
+      <!-- CategoryTemplate -->
+      <div id="category-template">
+        <div class="category-box">
+          <a href="products.html?catId=__ID__">
+            <img class="category-img" src="__IMG__" alt="categoryImage" />
+            <div class="category-info">
+              <h4>__TITLE__</h4>
+            </div>
           </a>
         </div>
-        <img src="__IMG__" alt="slideImage" title="__TITLE__" />
       </div>
-    </div>
+    </section>
     <!-- Template End -->
     <!-- Scripts Start -->
+    <!-- Global -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./api/ApiAddress.js"></script>
     <script src="./api/BaseApi.js"></script>
-    <script src="./api/Slider.js"></script>
+    <!-- Slider -->
+    <script src="./api/SliderApi.js"></script>
     <script src="./controllers/SliderCtrl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./src/libs/slider/slider.js"></script>
+    <!-- Category -->
+    <script src="./api/CategoryApi.js"></script>
+    <script src="./controllers/CategoryCtrl.js"></script>
+    <!-- Main -->
     <script src="./script.js"></script>
 
     <!-- Scripts End -->
