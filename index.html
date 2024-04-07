@@ -54,13 +54,15 @@
     <!-- Header End -->
     <!-- Slider Start -->
     <section class="slider-sec">
-      <div class="slideshow">
-        <div class="slides-box" id="slides-box">
-          <!-- Slides -->
-        </div>
-        <div class="slideshow-buttons">
-          <div class="prev-btn"><i class="fa-solid fa-angles-left"></i></div>
-          <div class="next-btn"><i class="fa-solid fa-angles-right"></i></div>
+      <div class="animation-div">
+        <div class="slideshow">
+          <div class="slides-box" id="slides-box">
+            <!-- Slides -->
+          </div>
+          <div class="slideshow-buttons">
+            <div class="prev-btn"><i class="fa-solid fa-angles-left"></i></div>
+            <div class="next-btn"><i class="fa-solid fa-angles-right"></i></div>
+          </div>
         </div>
       </div>
     </section>
@@ -73,6 +75,22 @@
       </div>
     </section>
     <!-- ProductsCategory End -->
+    <!-- Products Start -->
+    <section class="products-sec">
+      <div class="type-btns">
+        <span onclick="loadProducts(this,'Popular')" class="product-type-btn"
+          >Popular</span
+        >
+        <span onclick="loadProducts(this,'New')" class="product-type-btn"
+          >New</span
+        >
+      </div>
+      <h2 id="product-title" class="sec-title">Popular Products</h2>
+      <div id="products-holder" class="products-holder">
+        <!-- Products -->
+      </div>
+    </section>
+    <!-- Products End -->
     <!-- Template Start -->
     <!-- SliderTemplate -->
     <section class="template">
@@ -98,6 +116,34 @@
           </a>
         </div>
       </div>
+      <!-- ProductsTemplate -->
+      <div id="product-type-template">
+        <div class="product-type-item">
+          <div class="product-type-img-holder">
+          <img class="product-type-img" src="__IMG__" alt="" />
+          </div>
+          <div class="product-type-info">
+            <div class="product-type-title">
+              <h2>__TITLE__</h2>
+            </div>
+            <div class="product-type-price">
+              <h3>__PRICE__</h3>
+            </div>
+            <div class="product-type-footer">
+              <div class="product-type-item-color" id="colors-holder">
+                <!-- Colors -->
+              </div>
+              <div class="visit-product">
+                <a href="#" class="visit-product">Visit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Colors Template -->
+      <div id="color-template">
+        <div style="background-color: __COLOR__"></div>
+      </div>
     </section>
     <!-- Template End -->
     <!-- Scripts Start -->
@@ -113,6 +159,9 @@
     <!-- Category -->
     <script src="./api/CategoryApi.js"></script>
     <script src="./controllers/CategoryCtrl.js"></script>
+    <!-- Products -->
+    <script src="./api/ProductsApi.js"></script>
+    <script src="./controllers/ProductCtrl.js"></script>
     <!-- Main -->
     <script src="./script.js"></script>
 

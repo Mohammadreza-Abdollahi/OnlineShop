@@ -62,7 +62,7 @@ a {
 }
 /* Header */
 nav {
-  padding: 15px 5px;
+  padding: 20px 5px;
   background-color: #ccc;
 }
 .logo {
@@ -95,11 +95,15 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   background-color: #ccc;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
+}
+.animation-div {
+  transition: all 3s;
+  animation: GrowUP 1.5s;
 }
 .slideshow {
   max-width: 1600px;
-  min-width: 100px;
+  min-width: 1200px;
   height: 600px;
   position: relative;
   background-color: #000;
@@ -215,7 +219,7 @@ nav ul li a:hover {
 }
 .category-box {
   margin: 12px;
-  min-width: 450px;
+  min-width: 440px;
   width: 450px;
   height: 500px;
   position: relative;
@@ -225,7 +229,7 @@ nav ul li a:hover {
   transition: all 0.5s;
   border-radius: 8px;
   overflow: hidden;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
 .category-box:hover {
   -webkit-box-shadow: 0px 2px 15px 0px rgba(255, 255, 255, 0.7);
@@ -251,23 +255,6 @@ nav ul li a:hover {
   transition: all 0.5s;
   z-index: 1;
 }
-/* .category-info::before {
-  content: "";
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  background-color: #000000;
-  mix-blend-mode: multiply;
-  transition: all 1s ease;
-  opacity: 0.5;
-} */
-/* .category-box:hover .category-info::before {
-  transform: scaleY(16);
-  color: #fff;
-  z-index: 5;
-} */
 .category-box:hover .category-info {
   z-index: 1;
   transform: translateY(-250px) scale(2);
@@ -276,6 +263,125 @@ nav ul li a:hover {
 }
 .category-box:hover .category-img {
   filter: grayscale() blur(10px);
+}
+/* Products */
+.type-btns {
+  margin: 0px 10px;
+}
+.product-type-btn {
+  background-color: transparent;
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  margin: 0px 10px;
+  font-size: 19px;
+  cursor: pointer;
+}
+.product-type-btn-selected {
+  background-color: #ddd;
+  padding: 8px 20px;
+  border-radius: 30px;
+}
+.products-sec {
+  padding: 10px 15px 80px 15px;
+  vertical-align: top;
+  text-align: start;
+}
+.products-holder {
+  padding: 10px 20px;
+  padding-bottom: 100px;
+  display: flex;
+  gap: 18px;
+  flex-direction: row;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+.product-type-item {
+  margin: 12px;
+  min-width: 440px;
+  width: 450px;
+  height: 550px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 8px;
+  transition: all 0.5s;
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid #ccc;
+}
+.product-type-item:hover .product-type-img {
+  transform: scale(1.3);
+}
+.product-type-img-holder {
+  height: 65%;
+  width: 100%;
+  overflow: hidden;
+}
+.product-type-img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+}
+.product-type-item .product-type-info {
+  height: 30%;
+}
+.product-type-info {
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+.product-type-title {
+  position: absolute;
+  top: 0px;
+  padding: 10px 15px;
+  color: #333;
+  font-size: 20px;
+}
+.product-type-price {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  padding: 10px 15px;
+  color: #444;
+  font-size: 18px;
+}
+.product-type-footer {
+  position: absolute;
+  bottom: -25px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #eee;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-type-item-color {
+  padding-top: 5px;
+  vertical-align: middle;
+}
+.product-type-item-color div {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0px 6px;
+  border-radius: 50%;
+  outline-offset: 2px;
+  outline: 2px solid #000;
+  vertical-align: middle;
+}
+.visit-product {
+  vertical-align: middle;
+  transform: translateX(-25px);
+  background-color: #ff0055;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin: 0px 10px;
 }
 /* Animations */
 @keyframes socialsAnimate {
@@ -305,6 +411,20 @@ nav ul li a:hover {
   }
   to {
     transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes GrowUP {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-15 px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
