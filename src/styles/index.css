@@ -313,7 +313,7 @@ nav ul li a:hover {
   border: 1px solid #ccc;
 }
 .product-type-item:hover .product-type-img {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .product-type-img-holder {
   height: 65%;

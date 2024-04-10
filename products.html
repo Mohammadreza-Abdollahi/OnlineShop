@@ -8,41 +8,15 @@
       src="https://kit.fontawesome.com/64911f2f0b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/products.css" />
   </head>
   <body>
     <!-- Header Start -->
     <header>
-      <div class="socials">
-        <ul>
-          <li id="social1">
-            <a target="_blank" href="#"
-              ><i class="fa-brands fa-telegram"></i
-            ></a>
-          </li>
-          <li id="social2">
-            <a
-              target="_blank"
-              href="https://www.instagram.com/mohammadrza_abdollahi?igsh=NGM5bjRqNTRydHE5"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-          </li>
-          <li id="social3">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/mohammadreza-abdollahi-623a062b9"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-          </li>
-          <li id="social4">
-            <a target="_blank" href="https://github.com/Mohammadreza-Abdollahi"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
       <nav>
-        <a href="./index.html"><img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO" /></a>
+        <a href="./index.html"
+          ><img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO"
+        /></a>
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./products.html">Products</a></li>
@@ -52,59 +26,24 @@
       </nav>
     </header>
     <!-- Header End -->
-    <!-- Slider Start -->
-    <section class="slider-sec">
-      <div class="animation-div">
-        <div class="slideshow">
-          <div class="slides-box" id="slides-box">
-            <!-- Slides -->
-          </div>
-          <div class="slideshow-buttons">
-            <div class="prev-btn"><i class="fa-solid fa-angles-left"></i></div>
-            <div class="next-btn"><i class="fa-solid fa-angles-right"></i></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Slider End -->
     <!-- ProductsCategory Start -->
     <section class="category-sec">
-      <h2 class="sec-title">Categories</h2>
       <div id="category-holder" class="category-holder">
-        <!-- Categoris -->
+        <!-- Categories -->
       </div>
     </section>
     <!-- ProductsCategory End -->
     <!-- Products Start -->
     <section class="products-sec">
-      <div class="type-btns">
-        <span onclick="loadProducts(this,'Popular')" class="product-type-btn product-type-btn-selected"
-          >Popular</span
-        >
-        <span onclick="loadProducts(this,'New')" class="product-type-btn"
-          >New</span
-        >
-      </div>
-      <h2 id="product-title" class="sec-title">Popular Products</h2>
+      <h2 id="product-title" class="sec-title">Products</h2>
       <div id="products-holder" class="products-holder">
         <!-- Products -->
       </div>
     </section>
     <!-- Products End -->
     <!-- Template Start -->
-    <!-- SliderTemplate -->
     <section class="template">
-      <div id="slide-template">
-        <div class="slide" title="__TITLE__">
-          <div class="slide-info">
-            <a href="__LINK__">
-              <h3>__TITLE__</h3>
-              <span>__CAPTION__</span>
-            </a>
-          </div>
-          <img src="__IMG__" alt="slideImage" title="__TITLE__" />
-        </div>
-      </div>
+      <div id="slide-template"></div>
       <!-- CategoryTemplate -->
       <div id="category-template">
         <div class="category-box">
@@ -151,11 +90,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./api/ApiAddress.js"></script>
     <script src="./api/BaseApi.js"></script>
-    <!-- Slider -->
-    <script src="./api/SliderApi.js"></script>
-    <script src="./controllers/SliderCtrl.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./src/libs/slider/slider.js"></script>
     <!-- Category -->
     <script src="./api/CategoryApi.js"></script>
     <script src="./controllers/CategoryCtrl.js"></script>
@@ -163,8 +97,7 @@
     <script src="./api/ProductsApi.js"></script>
     <script src="./controllers/ProductCtrl.js"></script>
     <!-- Main -->
-    <script src="./pages/index.js"></script>
-
+    <script src="./pages/products.js"></script>
     <!-- Scripts End -->
   </body>
 </html>
