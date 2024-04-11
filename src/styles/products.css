@@ -153,7 +153,6 @@ nav ul li a:hover {
   margin: 0px 10px;
 }
 .products-sec {
-  display: inline-block;
   padding: 10px 15px 10px 15px;
   vertical-align: top;
   text-align: center;
@@ -169,7 +168,6 @@ nav ul li a:hover {
 }
 .product-type-item {
   margin: 12px;
-  min-width: 28%;
   width: 25%;
   height: 650px;
   position: relative;
@@ -252,6 +250,14 @@ nav ul li a:hover {
   border-radius: 3px;
   padding: 10px 20px;
   margin: 0px 10px;
+}
+/* Error */
+.product-error {
+  text-align: center;
+  padding: 50px;
+  color: #ff0055;
+  background-color: #ff00551e;
+  display: none;
 }
 /* Animations */
 @keyframes socialsAnimate {

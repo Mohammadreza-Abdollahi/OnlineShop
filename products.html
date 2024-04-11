@@ -40,14 +40,20 @@
         <!-- Products -->
       </div>
     </section>
+    <br />
     <!-- Products End -->
+    <!-- ErrorStart -->
+    <section id="product-error" class="product-error">
+      <h1 id="err">There are no products</h1>
+    </section>
+    <!-- ErrorEnd -->
     <!-- Template Start -->
     <section class="template">
       <div id="slide-template"></div>
       <!-- CategoryTemplate -->
       <div id="category-template">
         <div class="category-box">
-          <a href="products.html?catId=__ID__">
+          <a href="products.html?catId=__ID__&catName=__TITLE__">
             <img class="category-img" src="__IMG__" alt="categoryImage" />
             <div class="category-info">
               <h4>__TITLE__</h4>
@@ -73,7 +79,7 @@
                 <!-- Colors -->
               </div>
               <div class="visit-product">
-                <a href="#" class="visit-product">Visit</a>
+                <a href="./showproduct?id=__ID__" class="visit-product">Visit</a>
               </div>
             </div>
           </div>
@@ -88,6 +94,7 @@
     <!-- Scripts Start -->
     <!-- Global -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/tools/getParamsFromUrl.js"></script>
     <script src="./api/ApiAddress.js"></script>
     <script src="./api/BaseApi.js"></script>
     <!-- Category -->

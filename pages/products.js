@@ -4,13 +4,21 @@ var stopLoad = false;
 
 window.onload = async () => {
   await loadCategory();
-  await loadProducts(null, "All", pageIndex, pageSize);
+  await checkCategory();
 };
 window.onscroll = async () => {
   let lastElement =
     document.getElementById("products-holder").lastElementChild.scrollHeight;
-  if (window.scrollY > lastElement + 300 && !stopLoad) {
-    console.log("true");
-    await loadProducts(null, "All", ++pageIndex, pageSize);
+  if (window.scrollY > lastElement && !stopLoad) {
+    ++pageIndex;
+    await checkCategory();
+  }
+};
+checkCategory = async () => {
+  let catId = getParamByName("catId");
+  if (catId == null || catId == undefined) {
+    await loadProducts(null, "All", pageIndex, pageSize);
+  } else {
+    await loadProducts(null, "Category", pageIndex, pageSize, catId);
   }
 };

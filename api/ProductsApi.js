@@ -8,8 +8,11 @@ class ProductApi extends BaseApi {
   getById = async (id, onSuccess) => {
     this.getData(`product/${id}`, onSuccess);
   };
-  getByCategoryId = async (id, onSuccess) => {
-    this.getData(`product/cat/${id}`, onSuccess);
+  getByCategoryId = async (id, pageIndex, pageSize, onSuccess) => {
+    this.getData(
+      `product/cat/${id}?pageIndex=${pageIndex}&pageSize=${pageSize}`,
+      onSuccess
+    );
   };
   getNewProduct = async (onSuccess) => {
     this.getData(`product/new`, onSuccess);

@@ -1,10 +1,11 @@
+const errMessage = document.getElementById("product-error");
 let template = document.getElementById("product-type-template").innerHTML;
 let holderBox = document.getElementById("products-holder");
 let colorTemplate = document.getElementById("color-template").innerHTML;
 let colorHolder = document.getElementById("colors-holder");
 let api = new ProductApi();
 
-loadProducts = async (element, type, pageIndex, pageSize) => {
+loadProducts = async (element, type, pageIndex, pageSize, catId) => {
   const typeBtn = document.getElementsByClassName("product-type-btn");
   for (ele of typeBtn) {
     ele.classList.remove("product-type-btn-selected");
@@ -19,24 +20,36 @@ loadProducts = async (element, type, pageIndex, pageSize) => {
   document.getElementById("product-title").innerText = `${type} Products`;
   switch (type.toLowerCase()) {
     case "new":
-      await api.getNewProduct(fillData);
+      await api.getNewProduct(fillAllData);
       break;
     case "popular":
-      await api.getPopularProduct(fillData);
+      await api.getPopularProduct(fillAllData);
       break;
     case "all":
       await api.getAll(pageIndex, pageSize, fillDataScrolling);
+      break;
+    case "category":
+      await api.getByCategoryId(catId, pageIndex, pageSize, fillDataScrolling);
+      document.getElementById("product-title").innerText = `${getParamByName(
+        "catName"
+      )} Products`;
+
       break;
     default:
       await api.getPopularProduct(fillData);
       break;
   }
 };
-fillData = async (data) => {
+fillAllData = async (data) => {
   holderBox.innerHTML = "";
-  let slideCount = data.length;
-  for (let i = 0; i < slideCount; i++) {
-    // debugger;
+  let dataCount = data.length;
+  // if (data.length == 0) {
+  //   errMessage.style.display = "block";
+  // }
+  // if (data.length > 0) {
+  //   errMessage.style.display = "none";
+  // }
+  for (let i = 0; i < dataCount; i++) {
     let currentSlide = template;
     currentSlide = currentSlide.replace(/__TITLE__/g, data[i].title);
     currentSlide = currentSlide.replace(
@@ -59,11 +72,18 @@ fillData = async (data) => {
     // colorHolder.innerHTML += currentColor;
     // }
     holderBox.innerHTML += currentSlide;
+  }
+  if (holderBox.childElementCount == 0) {
+    if(errMessage != null || errMessage != undefined){
+      errMessage.style.display = "block";
+    }
+  } else {
+    errMessage.style.display = "none";
   }
 };
 fillDataScrolling = async (data) => {
-  let slideCount = data.length;
-  for (let i = 0; i < slideCount; i++) {
+  let dataCount = data.length;
+  for (let i = 0; i < dataCount; i++) {
     // debugger;
     let currentSlide = template;
     currentSlide = currentSlide.replace(/__TITLE__/g, data[i].title);
@@ -88,10 +108,20 @@ fillDataScrolling = async (data) => {
     // }
     holderBox.innerHTML += currentSlide;
   }
-  if (slideCount == 0) {
+  if (dataCount == 0) {
     stopLoad = true;
+  }
+  if (holderBox.childElementCount == 0) {
+    if(errMessage != null || errMessage != undefined){
+      errMessage.style.display = "block";
+    }
+  } else {
+    errMessage.style.display = "none";
   }
 };
 // defaultProducts = async () => {
 //   await loadPopularProducts();
 // };
+checkError = (data) => {
+  alert("Hello");
+};
