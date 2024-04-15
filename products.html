@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
-    <title>OnlineShop</title>
+    <title>OnlineShop | Products</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
@@ -63,27 +63,31 @@
       </div>
       <!-- ProductsTemplate -->
       <div id="product-type-template">
-        <div class="product-type-item">
-          <div class="product-type-img-holder">
-            <img class="product-type-img" src="__IMG__" alt="" />
-          </div>
-          <div class="product-type-info">
-            <div class="product-type-title">
-              <h2>__TITLE__</h2>
+        <a href="./showproduct.html?id=__ID__">
+          <div class="product-type-item">
+            <div class="product-type-img-holder">
+              <img class="product-type-img" src="__IMG__" alt="" />
             </div>
-            <div class="product-type-price">
-              <h3>__PRICE__</h3>
-            </div>
-            <div class="product-type-footer">
-              <div class="product-type-item-color" id="colors-holder">
-                <!-- Colors -->
+            <div class="product-type-info">
+              <div class="product-type-title">
+                <h2>__TITLE__</h2>
               </div>
-              <div class="visit-product">
-                <a href="./showproduct?id=__ID__" class="visit-product">Visit</a>
+              <div class="product-type-price">
+                <h3>__PRICE__</h3>
+              </div>
+              <div class="product-type-footer">
+                <div class="product-type-item-color" id="colors-holder">
+                  <!-- Colors -->
+                </div>
+                <div class="visit-product">
+                  <a href="#" class="visit-product"
+                    >Add to Cart</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <!-- Colors Template -->
       <div id="color-template">

@@ -123,31 +123,43 @@
       </div>
       <!-- ProductsTemplate -->
       <div id="product-type-template">
-        <div class="product-type-item">
-          <div class="product-type-img-holder">
-            <img class="product-type-img" src="__IMG__" alt="" />
-          </div>
-          <div class="product-type-info">
-            <div class="product-type-title">
-              <h2>__TITLE__</h2>
+        <a href="./showproduct.html?id=__ID__">
+          <div class="product-type-item">
+            <div class="product-type-img-holder">
+              <img class="product-type-img" src="__IMG__" alt="" />
             </div>
-            <div class="product-type-price">
-              <h3>__PRICE__</h3>
-            </div>
-            <div class="product-type-footer">
-              <div class="product-type-item-color" id="colors-holder">
-                <!-- Colors -->
+            <div class="product-type-info">
+              <div class="product-type-title">
+                <h2>__TITLE__</h2>
               </div>
-              <div class="visit-product">
-                <a href="./showproduct?id=__ID__" class="visit-product">Visit</a>
+              <div class="product-type-price">
+                <h3>__PRICE__</h3>
+              </div>
+              <div class="product-type-footer">
+                <div class="product-type-item-color" id="colors-holder">
+                  <!-- Colors -->
+                </div>
+                <div class="visit-product">
+                  <a href="#" class="visit-product"
+                    >Add to Cart</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
-      <!-- Colors Template -->
+      <!-- ColorTemplate -->
       <div id="color-template">
-        <div style="background-color: __COLOR__"></div>
+        <a href="" title="__TITLE__" onclick="changeColor(this,'__ID__','__HEX__')">
+          <div class="colors" style="background-color: #__HEX__"></div>
+        </a>
+      </div>
+      <!-- SizeTemplate -->
+      <div id="size-template" class="size-template">
+        <a href="" title="__TITLE__" onclick="changeSize(this,'__ID__','__TITLE__')">
+          <div class="size">__TITLE__</div>
+        </a>
       </div>
     </section>
     <!-- Template End -->
@@ -168,6 +180,7 @@
     <!-- Products -->
     <script src="./api/ProductsApi.js"></script>
     <script src="./controllers/ProductCtrl.js"></script>
+    <script src="./controllers/ProductShowCtrl.js"></script>
     <!-- Main -->
     <script src="./pages/index.js"></script>
 

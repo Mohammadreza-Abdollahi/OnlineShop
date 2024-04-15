@@ -1,7 +1,7 @@
 const errMessage = document.getElementById("product-error");
 let template = document.getElementById("product-type-template").innerHTML;
 let holderBox = document.getElementById("products-holder");
-let colorTemplate = document.getElementById("color-template").innerHTML;
+let colorTemplate = document.getElementById("color-template");
 let colorHolder = document.getElementById("colors-holder");
 let api = new ProductApi();
 
@@ -10,11 +10,7 @@ loadProducts = async (element, type, pageIndex, pageSize, catId) => {
   for (ele of typeBtn) {
     ele.classList.remove("product-type-btn-selected");
   }
-  if (element == null) {
-    typeBtn != null && undefined
-      ? typeBtn[0].classList.add("product-type-btn-selected")
-      : console.log("true");
-  } else if (element != null) {
+  if (element != null) {
     element.classList.add("product-type-btn-selected");
   }
   document.getElementById("product-title").innerText = `${type} Products`;
@@ -42,13 +38,7 @@ loadProducts = async (element, type, pageIndex, pageSize, catId) => {
 };
 fillAllData = async (data) => {
   holderBox.innerHTML = "";
-  let dataCount = data.length;
-  // if (data.length == 0) {
-  //   errMessage.style.display = "block";
-  // }
-  // if (data.length > 0) {
-  //   errMessage.style.display = "none";
-  // }
+  let dataCount = data.length;  
   for (let i = 0; i < dataCount; i++) {
     let currentSlide = template;
     currentSlide = currentSlide.replace(/__TITLE__/g, data[i].title);
@@ -59,18 +49,6 @@ fillAllData = async (data) => {
     currentSlide = currentSlide.replace(/__IMG__/g, data[i].image);
     currentSlide = currentSlide.replace(/__ID__/g, data[i].id);
     currentSlide = currentSlide.replace(/__DATE__/g, data[i].addDate);
-    // let colorCount = data[i].colors.length;
-    // for (let cc = 0; cc < colorCount; cc++) {
-    // colorHolder.innerHTML = "";
-    // debugger;
-    // let currentColor = colorTemplate;
-    // console.log(`#${data[i].colors[cc].hexValue}`);
-    // currentColor = currentColor.replace(
-    // "__COLOR__",
-    // `#${data[i].colors[cc].hexValue}`
-    // );
-    // colorHolder.innerHTML += currentColor;
-    // }
     holderBox.innerHTML += currentSlide;
   }
   if (holderBox.childElementCount == 0) {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <title>OnlineShop</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64911f2f0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/styles/showproduct.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <nav>
+        <a href="./index.html"
+          ><img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO"
+        /></a>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header End -->
+    <!-- Products Start -->
+    <!--<section class="products-sec">
+      <h2 id="product-title" class="sec-title">Popular Products</h2>
+      <div id="products-holder" class="products-holder">
+         Products --><!--
+      </div>
+    </section> -->
+    <!-- Products End -->
+    <!-- Show Product Start -->
+    <main id="product-holder">
+      <section class="left-side">
+        <img id="product-img" src="__IMG__" alt="ProductImage" />
+      </section>
+      <section class="right-side">
+        <h1 id="title"><!--Title--></h1>
+          <a
+            id="cat-link"
+            href="products.html?catId=__ID__&catName=__TITLE__"
+            class="category"
+          >
+            <i class="fa-solid fa-hashtag"></i> <span id="cat-title"><!--Category--></span>
+          </a>
+          <br><br><br>
+        <span>Color</span>
+        <div class="product-color" id="colors-holder">
+          <!-- Colors -->
+        </div>
+        <span>Size</span>
+        <div class="product-size" id="size-holder">
+          <!-- Sizes -->
+        </div>
+        <br />
+        <div class="paragraph">
+          <p id="description"><!--Description--></p>
+        </div>
+        <br /><br />
+        <a class="add-btn" href="#">Add to Cart</a>
+      </section>
+    </main>
+    <section id="loading" class="loading-holder">
+      <div class="loading">
+        <img src="./src/loading/loading.gif" alt="">
+      </div>
+    </section>
+    <!-- Show Product End -->
+    <!-- Template Start -->
+    <section class="template">
+      <!-- ColorTemplate -->
+      <div id="color-template">
+        <a title="__TITLE__">
+          <div class="colors" style="background-color: #__HEX__"  onclick="changeColor(this,'__ID__','__TITLE__')"></div>
+        </a>
+      </div>
+      <!-- SizeTemplate -->
+      <div id="size-template" class="size-template">
+        <a title="__TITLE__">
+          <div class="size"  onclick="changeSize(this,'__ID__','__TITLE__')">__TITLE__</div>
+        </a>
+      </div>
+    </section>
+    <!-- Template End -->
+    <!-- Scripts Start -->
+    <!-- Global -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/tools/getParamsFromUrl.js"></script>
+    <script src="./api/ApiAddress.js"></script>
+    <script src="./api/BaseApi.js"></script>
+    <!-- Products -->
+    <script src="./api/ProductsApi.js"></script>
+    <script src="./controllers/ProductShowCtrl.js"></script>
+    <!-- Main -->
+    <script src="./pages/productshow.js"></script>
+
+    <!-- Scripts End -->
+  </body>
+</html>
