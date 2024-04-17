@@ -28,35 +28,16 @@
     <!-- Header End -->
     <!-- Products End -->
     <!-- Show Product Start -->
-    <main id="product-holder">
-      <section class="left-side">
-        <img id="product-img" src="__IMG__" alt="ProductImage" />
-      </section>
-      <section class="right-side">
+    <main id="blog-holder">
+        <img id="blog-img" src="src/images/slide2.jpg" alt="blogImage" />
         <h1 id="title"><!--Title--></h1>
-          <a
-            id="cat-link"
-            href="products.html?catId=__ID__&catName=__TITLE__"
-            class="category"
-          >
-            <i class="fa-solid fa-hashtag"></i> <span id="cat-title"><!--Category--></span>
-          </a>
-          <br><br><br>
-        <span>Color</span>
-        <div class="product-color" id="colors-holder">
-          <!-- Colors -->
-        </div>
-        <span>Size</span>
-        <div class="product-size" id="size-holder">
-          <!-- Sizes -->
-        </div>
-        <br />
-        <div class="paragraph">
+        <span id="sub-title"><!--SubTitle--></span>
+        <div id="paragraph">
           <p id="description"><!--Description--></p>
         </div>
-        <br /><br />
-        <a class="add-btn" href="#">Add to Cart</a>
-      </section>
+        <hr>
+        <span id="add-date"></span>
+        <br>
     </main>
     <section id="loading" class="loading-holder">
       <div class="loading">
@@ -64,31 +45,16 @@
       </div>
     </section>
     <!-- Show Product End -->
-    <!-- Template Start -->
-    <section class="template">
-      <!-- ColorTemplate -->
-      <div id="color-template">
-        <a title="__TITLE__">
-          <div class="colors" style="background-color: #__HEX__"  onclick="changeColor(this,'__ID__','__TITLE__')"></div>
-        </a>
-      </div>
-      <!-- SizeTemplate -->
-      <div id="size-template" class="size-template">
-        <a title="__TITLE__">
-          <div class="size"  onclick="changeSize(this,'__ID__','__TITLE__')">__TITLE__</div>
-        </a>
-      </div>
-    </section>
-    <!-- Template End -->
     <!-- Scripts Start -->
     <!-- Global -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./src/tools/getParamsFromUrl.js"></script>
+    <script src="./src/tools/dateConvertion.js"></script>
     <script src="./api/ApiAddress.js"></script>
     <script src="./api/BaseApi.js"></script>
     <!-- Products -->
-    <script src="./api/ProductsApi.js"></script>
-    <script src="./controllers/ProductShowCtrl.js"></script>
+    <script src="./api/BlogAPI.js"></script>
+    <script src="./controllers/BlogShowCtrl.js"></script>
     <!-- Main -->
     <script src="./pages/productshow.js"></script>
 

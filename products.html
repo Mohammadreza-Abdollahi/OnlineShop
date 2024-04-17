@@ -8,12 +8,12 @@
       src="https://kit.fontawesome.com/64911f2f0b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./src/styles/products.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
   </head>
   <body>
     <!-- Header Start -->
     <header>
-      <nav>
+      <nav class="product-nav">
         <a href="./index.html"
           ><img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO"
         /></a>
@@ -27,16 +27,16 @@
     </header>
     <!-- Header End -->
     <!-- ProductsCategory Start -->
-    <section class="category-sec">
-      <div id="category-holder" class="category-holder">
+    <section class="product-category-sec">
+      <div id="category-holder" class="product-category-holder">
         <!-- Categories -->
       </div>
     </section>
     <!-- ProductsCategory End -->
     <!-- Products Start -->
-    <section class="products-sec">
-      <h2 id="product-title" class="sec-title">Products</h2>
-      <div id="products-holder" class="products-holder">
+    <section class="product-products-sec">  
+      <h2 id="product-title" class="product-sec-title">Products</h2>
+      <div id="products-holder" class="product-products-holder">
         <!-- Products -->
       </div>
     </section>
@@ -52,10 +52,10 @@
       <div id="slide-template"></div>
       <!-- CategoryTemplate -->
       <div id="category-template">
-        <div class="category-box">
+        <div class="product-category-box">
           <a href="products.html?catId=__ID__&catName=__TITLE__">
-            <img class="category-img" src="__IMG__" alt="categoryImage" />
-            <div class="category-info">
+            <img class="product-category-img" src="__IMG__" alt="categoryImage" />
+            <div class="product-category-info">
               <h4>__TITLE__</h4>
             </div>
           </a>
@@ -64,25 +64,20 @@
       <!-- ProductsTemplate -->
       <div id="product-type-template">
         <a href="./showproduct.html?id=__ID__">
-          <div class="product-type-item">
-            <div class="product-type-img-holder">
-              <img class="product-type-img" src="__IMG__" alt="" />
+          <div class="product-item">
+            <div class="product-img-holder">
+              <img class="product-img" src="__IMG__" alt="" />
             </div>
-            <div class="product-type-info">
-              <div class="product-type-title">
+            <div class="product-info">
+              <div class="product-title">
                 <h2>__TITLE__</h2>
               </div>
-              <div class="product-type-price">
-                <h3>__PRICE__</h3>
-              </div>
-              <div class="product-type-footer">
-                <div class="product-type-item-color" id="colors-holder">
+              <div class="product-footer">
+                <div class="product-item-color" id="colors-holder">
                   <!-- Colors -->
                 </div>
-                <div class="visit-product">
-                  <a href="#" class="visit-product"
-                    >Add to Cart</a
-                  >
+                <div class="product-price">
+                  <h3>__PRICE__</h3>
                 </div>
               </div>
             </div>

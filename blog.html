@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <title>OnlineShop | Products</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64911f2f0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header>
+      <nav class="product-nav">
+        <a href="./index.html"
+          ><img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO"
+        /></a>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header End -->
+    <!-- Blogs Start -->
+    <section class="blog-sec">
+      <h2 class="product-sec-title">Blogs</h2>
+      <div id="blog-holder" class="blog-holder">
+        <!-- Blogs -->
+      </div>
+    </section>
+    <!-- Blogs End -->
+    <!-- Template Start -->
+    <section class="template">
+      <!-- ProductsTemplate -->
+      <div id="blog-template">
+        <a href="./showblog.html?id=__ID__">
+          <div class="blog-item">
+            <div class="blog-img-holder">
+              <img class="blog-img" src="src/images/slide2.jpg" alt="BlogImage" />
+            </div>
+            <div class="blog-info">
+              <div class="blog-title">
+                <h1>__TITLE__</h1>
+                <span>__DES__</span>
+                </div>
+              <div class="blog-footer">
+                <span class="blog-date">__DATE__</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Template End -->
+    <!-- Scripts Start -->
+    <!-- Global -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/tools/getParamsFromUrl.js"></script>
+    <script src="./src/tools/dateConvertion.js"></script>
+    <script src="./api/ApiAddress.js"></script>
+    <script src="./api/BaseApi.js"></script>
+    <!-- Category -->
+    <script src="./api/CategoryApi.js"></script>
+    <script src="./controllers/CategoryCtrl.js"></script>
+    <!-- Blog -->
+    <script src="./api/blogAPI.js"></script>
+    <script src="./controllers/blogCtrl.js"></script>
+    <!-- Main -->
+    <script src="./pages/blog.js"></script>
+    <!-- Scripts End -->
+  </body>
+</html>
