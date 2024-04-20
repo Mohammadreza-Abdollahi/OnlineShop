@@ -29,22 +29,100 @@
     <!-- Products End -->
     <!-- Show Product Start -->
     <main id="blog-holder">
-        <img id="blog-img" src="src/images/slide2.jpg" alt="blogImage" />
-        <h1 id="title"><!--Title--></h1>
-        <span id="sub-title"><!--SubTitle--></span>
-        <div id="paragraph">
-          <p id="description"><!--Description--></p>
-        </div>
-        <hr>
-        <span id="add-date"></span>
-        <br>
+      <img id="blog-img" src="src/images/slide2.jpg" alt="blogImage" />
+      <h1 id="title"><!--Title--></h1>
+      <span id="sub-title"><!--SubTitle--></span>
+      <div id="paragraph">
+        <p id="description"><!--Description--></p>
+      </div>
+      <hr />
+      <span id="add-date"></span>
+      <br />
     </main>
     <section id="loading" class="loading-holder">
       <div class="loading">
-        <img src="./src/loading/loading.gif" alt="">
+        <img src="./src/loading/loading.gif" alt="" />
       </div>
     </section>
     <!-- Show Product End -->
+    <!-- Footer Start -->
+    <footer>
+      <section class="footer-1">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.894813821805!2d51.67633573036261!3d32.64402632761901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbc3606f687047b%3A0xf11139a1b996ce64!2z2KfYs9iq2KfZhiDYp9i12YHZh9in2YbYjCDYp9i12YHZh9in2YbYjCDYrtuM2KfYqNin2YYg2YXZhtmI2obZh9ix24zYjCDYp9uM2LHYp9mG!5e0!3m2!1sfa!2s!4v1713468304030!5m2!1sfa!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <section class="footer-2">
+        <div class="footer-2-col">
+          <h3>About</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            maiores soluta voluptates ducimus numquam vitae, aut esse fuga eos
+            optio iure molestias harum suscipit odio dolorem, eaque fugiat
+            aperiam magni impedit accusantium voluptatibus assumenda culpa
+            molestiae. Dignissimos, est accusantium. Reprehenderit.
+          </p>
+        </div>
+        <div class="footer-2-col">
+          <h3>Social</h3>
+          <div class="socials">
+            <ul>
+              <li id="social1">
+                <a id="social-item-1" target="_blank" href="#"
+                  ><i class="fa-brands fa-telegram"></i
+                ></a>
+              </li>
+              <li id="social2">
+                <a
+                  id="social-item-2"
+                  target="_blank"
+                  href="https://www.instagram.com/mohammadrza_abdollahi?igsh=NGM5bjRqNTRydHE5"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li id="social3">
+                <a
+                  id="social-item-3"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/mohammadreza-abdollahi-623a062b9"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li id="social4">
+                <a
+                  id="social-item-4"
+                  target="_blank"
+                  href="https://github.com/Mohammadreza-Abdollahi"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-2-col">
+          <h3>Links</h3>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./about.html">About Us</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer-3">
+        <span
+          >All rights reserved for <a href="#">MaMaD</a> and
+          <a target="_blank" href="https://holosen.net/">Holosen</a></span
+        >
+      </section>
+    </footer>
+    <!-- Footer End -->
     <!-- Scripts Start -->
     <!-- Global -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -52,12 +130,11 @@
     <script src="./src/tools/dateConvertion.js"></script>
     <script src="./api/ApiAddress.js"></script>
     <script src="./api/BaseApi.js"></script>
-    <!-- Products -->
+    <!-- Blogs -->
     <script src="./api/BlogAPI.js"></script>
     <script src="./controllers/BlogShowCtrl.js"></script>
     <!-- Main -->
-    <script src="./pages/productshow.js"></script>
-
+    <script src="./pages/blogshow.js"></script> 
     <!-- Scripts End -->
   </body>
 </html>

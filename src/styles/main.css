@@ -27,7 +27,7 @@ a {
   font-size: 34px;
   padding: 5px 30px;
 }
-hr{
+hr {
   margin: 35px auto 15px auto;
   color: #eee;
   width: 95%;
@@ -94,6 +94,101 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #000;
+}
+/* Footer */
+.footer-1 iframe {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.footer-2 {
+  color: #616161;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: auto;
+  vertical-align: top;
+  padding: 5px 5px 18px 5px;
+}
+.footer-2 .footer-2-col {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px auto;
+  width: 28%;
+  padding: 10px;
+}
+.footer-2 .footer-2-col h3 {
+  vertical-align: top;
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+.footer-2 .footer-2-col p {
+  font-size: 18px;
+  text-align: justify;
+}
+footer .socials {
+  background-color: transparent;
+  padding: 5px 2px;
+}
+footer .socials ul {
+  text-align: center;
+}
+footer .socials ul li {
+  margin: 10px 18px;
+}
+footer .socials ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  color: #616161;
+  transition: all 0.5s;
+}
+footer .socials ul li a span {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+footer .socials ul li a:hover {
+  color: #000;
+  transition: all.5s;
+}
+footer #social1,
+footer #social2,
+footer #social3,
+footer #social4 {
+  position: relative;
+  transition: all .5s;
+}
+.footer-links{
+  list-style: none;
+  margin-left: 15px;
+  font-size: 18px;
+}
+.footer-links li{
+  margin: 10px 0px;
+  transition: all .5s;
+}
+.footer-links li a{
+  color: #616161;
+}
+.footer-links li a:hover{
+  color: #000;
+}
+.footer-links li:hover{
+  color: #000;
+  transform: translateX(10px);
+}
+.footer-3{
+  font-size: 22px;
+  font-family: font;
+  background: #282d31;
+  color: #FFC94A;
+  padding: 20px 10px;
+  text-align: center;
+}
+.footer-3 a{
+  font-family: fontBold;
+  color: #FFC94A;
 }
 /* Product Header */
 .product-nav {
@@ -481,7 +576,7 @@ nav ul li a:hover {
   margin: 0px 10px;
 }
 .product-products-sec {
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px 0px 15px;
   vertical-align: top;
   text-align: center;
 }
@@ -489,7 +584,7 @@ nav ul li a:hover {
   margin: auto;
   width: 90%;
   padding: 10px 20px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   gap: 18px;
   padding-bottom: 10px;
   scroll-snap-type: x mandatory;
@@ -500,8 +595,8 @@ nav ul li a:hover {
   height: 550px;
   position: relative;
   display: inline-block;
+  margin: 5px 8px 0px 8px;
   vertical-align: top;
-  margin: 5px 8px;
   transition: all 0.5s;
   border-radius: 8px;
   overflow: hidden;
@@ -703,7 +798,7 @@ main {
   background-color: #000;
   color: #fff;
 }
-.loading-holder{
+.loading-holder {
   width: 100%;
   height: 100%;
   background-color: #0000008f;
@@ -712,25 +807,26 @@ main {
   left: 0px;
   display: block;
 }
-.loading{
+.loading {
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
 }
 /* ////////////////////////////////////////////////////////////////// */
 /* Blogs */
 /* .blog-sec{
 
 } */
-.blog-holder{
+.blog-holder {
+  padding: 5px 1px 15px 1px;
   width: 85%;
   margin: auto;
 }
-.blog-item{
+.blog-item {
   display: inline-block;
   width: 48%;
   border: 1px solid #ccc;
@@ -738,28 +834,28 @@ main {
   position: relative;
   margin: 10px 10px;
 }
-.blog-img-holder{
+.blog-img-holder {
   width: 100%;
   height: 80%;
   overflow: hidden;
 }
-.blog-img{
+.blog-img {
   width: 100%;
   height: 100%;
 }
-.blog-info{
+.blog-info {
   padding: 4px 14px 40px 14px;
 }
-.blog-info h1{
+.blog-info h1 {
   font-size: 35px;
   margin: 4px 0px 5px 0px;
 }
-.blog-info span{
+.blog-info span {
   font-size: 20px;
   margin: 0px 0px 0px 6px;
   color: #555;
 }
-.blog-info .blog-date{
+.blog-info .blog-date {
   font-size: 16px;
   margin: 0px 0px 0px 6px;
   color: #555;
@@ -768,29 +864,29 @@ main {
   bottom: 10px;
 }
 /* Showblog */
-#blog-holder{
+#blog-holder {
   position: relative;
 }
-#blog-img{
+#blog-img {
   width: 100%;
   height: 800px;
   border-radius: 8px;
   margin: 4px 0px 5px 0px;
 }
-#title{
+#title {
   font-size: 50px;
 }
-#sub-title{
+#sub-title {
   font-size: 25px;
   color: #777;
 }
-#paragraph{
+#paragraph {
   margin-top: 12px;
 }
-#description{
+#description {
   font-size: 20px;
 }
-#add-date{
+#add-date {
   position: absolute;
   margin: 10px 0px;
   font-size: 18px;
@@ -839,6 +935,16 @@ main {
   }
   100% {
     transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fromLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
     opacity: 1;
   }
 }

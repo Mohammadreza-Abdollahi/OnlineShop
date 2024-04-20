@@ -1,3 +1,4 @@
-window.onload = async()=>{
-    await loadBlog();
-}
+window.onload = async () => {
+  document.getElementById("loading").style.display = "none";
+  await loadBlog();
+};

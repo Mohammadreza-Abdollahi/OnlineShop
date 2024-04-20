@@ -3,6 +3,7 @@ let pageIndex = 0;
 var stopLoad = false;
 
 window.onload = async () => {
+  document.getElementById("loading").style.display = "none"
   await loadCategory();
   await checkCategory();
 };
