@@ -27,10 +27,10 @@
     </header>
     <!-- Header End -->
     <!-- Blogs Start -->
-    <section class="blog-sec">
-      <h2 class="product-sec-title">Blogs</h2>
-      <div id="blog-holder" class="blog-holder">
-        <!-- Blogs -->
+    <section class="about-sec">
+      <h2 class="product-sec-title">About Us</h2>
+      <div id="about-holder" class="about-holder">
+        <p id="about-par"></p>
       </div>
     </section>
     <!-- Blogs End -->
@@ -117,33 +117,6 @@
         <img src="./src/loading/loading.gif" alt="" />
       </div>
     </section>
-    <!-- Template Start -->
-    <section class="template">
-      <!-- ProductsTemplate -->
-      <div id="blog-template">
-        <a href="./showblog.html?id=__ID__&pageName=blog">
-          <div class="blog-item">
-            <div class="blog-img-holder">
-              <img
-                class="blog-img"
-                src="src/images/slide2.jpg"
-                alt="BlogImage"
-              />
-            </div>
-            <div class="blog-info">
-              <div class="blog-title">
-                <h1>__TITLE__</h1>
-                <span>__DES__</span>
-              </div>
-              <div class="blog-footer">
-                <span class="blog-date">__DATE__</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-    <!-- Template End -->
     <!-- Scripts Start -->
     <!-- Global -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -155,11 +128,11 @@
     <!-- Category -->
     <script src="./api/CategoryApi.js"></script>
     <script src="./controllers/CategoryCtrl.js"></script>
-    <!-- Blog -->
-    <script src="./api/blogAPI.js"></script>
-    <script src="./controllers/BlogCtrl.js"></script>
+    <!-- About -->
+    <script src="./api/ContentApi.js"></script>
+    <script src="./controllers/AboutCtrl.js"></script>
     <!-- Main -->
-    <script src="./pages/blog.js"></script>
+    <script src="./pages/about.js"></script>
     <!-- Scripts End -->
   </body>
 </html>

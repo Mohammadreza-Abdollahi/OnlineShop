@@ -18,10 +18,10 @@
           ><img class="logo" src="./src/logo/logo_cutted.png" alt="LOGO"
         /></a>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./products.html">Products</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./about.html">About Us</a></li>
+          <li><a id="home-page" href="./index.html?pageName=home">Home</a></li>
+          <li><a id="products-page" href="./products.html?pageName=products">Products</a></li>
+          <li><a id="blog-page" href="./blog.html?pageName=blog">Blog</a></li>
+          <li><a id="about-page" href="./about.html?pageName=about">About Us</a></li>
         </ul>
       </nav>
     </header>
@@ -108,10 +108,10 @@
         <div class="footer-2-col">
           <h3>Links</h3>
           <ul class="footer-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./products.html">Products</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./about.html">About Us</a></li>
+            <li><a id="home-page" href="./index.html?pageName=home">Home</a></li>
+            <li><a id="products-page" href="./products.html?pageName=products">Products</a></li>
+            <li><a id="blog-page" href="./blog.html?pageName=blog">Blog</a></li>
+            <li><a id="about-page" href="./about.html?pageName=about">About Us</a></li>
           </ul>
         </div>
       </section>
@@ -127,6 +127,7 @@
     <!-- Global -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./src/tools/getParamsFromUrl.js"></script>
+    <script src="./src/tools/activeNavItems.js"></script>
     <script src="./src/tools/dateConvertion.js"></script>
     <script src="./api/ApiAddress.js"></script>
     <script src="./api/BaseApi.js"></script>

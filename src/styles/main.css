@@ -95,6 +95,10 @@ nav ul li a {
 nav ul li a:hover {
   color: #000;
 }
+.nav-item-active{
+  font-size: 22px !important;
+  color: #910030 !important;
+}
 /* Footer */
 .footer-1 iframe {
   width: 100%;
@@ -892,6 +896,17 @@ main {
   font-size: 18px;
   color: #666;
   right: 30px;
+}
+/* ////////////////////////////////////////////////////////////////// */
+/* About */
+.about-holder{
+  width: 90%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  padding: 0px 5px 30px 5px;
+}
+#about-par{
+  font-size: 20px;
 }
 /* Animations */
 @keyframes socialsAnimate {
